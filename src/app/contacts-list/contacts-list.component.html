@@ -1,0 +1,11 @@
+<trm-contacts-header> </trm-contacts-header>
+<ul class="collection">
+  <div *ngFor="let contact of contacts | async">
+    <li class="collection-item avatar">
+      <div>
+        <img [src]="contact.image" alt="" class="circle">
+        <a class="title" [routerLink]="['/contact', contact.id]">{{contact.name}}</a>
+      </div>
+    </li>
+  </div>   
+</ul>
